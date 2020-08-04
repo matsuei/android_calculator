@@ -63,7 +63,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onClearButtonClick"
-                android:text="@string/clear" />
+                android:text="@string/clear"
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -77,7 +78,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onSevenButtonClick"
-                android:text="@string/seven" />
+                android:text="@string/seven"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/button34"
@@ -85,7 +87,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onEightButtonClick"
-                android:text="@string/eight" />
+                android:text="@string/eight"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/button35"
@@ -93,7 +96,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onNineButtonClick"
-                android:text="@string/nine" />
+                android:text="@string/nine"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/button36"
@@ -101,7 +105,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onDivideButtonClick"
-                android:text="@string/divide" />
+                android:text="@string/divide"
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -115,7 +120,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onFourButtonClick"
-                android:text="@string/four" />
+                android:text="@string/four"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/button38"
@@ -123,7 +129,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onFiveButtonClick"
-                android:text="@string/five" />
+                android:text="@string/five"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/button39"
@@ -131,7 +138,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onSixButtonClick"
-                android:text="@string/six" />
+                android:text="@string/six"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/button40"
@@ -139,7 +147,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onTimesButtonClick"
-                android:text="@string/times" />
+                android:text="@string/times"
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -153,7 +162,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onOneButtonClick"
-                android:text="@string/one" />
+                android:text="@string/one"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/button42"
@@ -161,7 +171,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onTwoButtonClick"
-                android:text="@string/two" />
+                android:text="@string/two"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/button43"
@@ -169,7 +180,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onThreeButtonClick"
-                android:text="@string/three" />
+                android:text="@string/three"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/button44"
@@ -177,7 +189,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onMinusButtonClick"
-                android:text="@string/minus" />
+                android:text="@string/minus"
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -191,7 +204,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onZeroButtonClick"
-                android:text="@string/zero" />
+                android:text="@string/zero"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/button46"
@@ -199,7 +213,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onDotButtonClick"
-                android:text="@string/dot" />
+                android:text="@string/dot"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/button47"
@@ -207,7 +222,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onEqualButtonClick"
-                android:text="@string/equal" />
+                android:text="@string/equal"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/button48"
@@ -215,7 +231,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onPlusButtonClick"
-                android:text="@string/plus" />
+                android:text="@string/plus"
+                android:textSize="24sp" />
         </TableRow>
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
