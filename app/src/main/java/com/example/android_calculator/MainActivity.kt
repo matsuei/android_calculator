@@ -26,8 +26,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun clearResultText() {
-        val textView = findViewById<TextView>(R.id.resultText)
-        textView.text = ""
+        val resultTextView = findViewById<TextView>(R.id.resultText)
+        resultTextView.text = ""
+        val symbolTextView = findViewById<TextView>(R.id.symbolText)
+        symbolTextView.text = ""
+    }
+
+    enum class Symbol(val text: String) {
+        Plus("+"),
+        Minus("−"),
+        Times("×"),
+        Divide("÷"),
+    }
+
+    private fun selectSymbol(symbol: Symbol) {
+        val textView = findViewById<TextView>(R.id.symbolText)
+        textView.text = symbol.text
     }
 
     fun onZeroButtonClick(view: View) {
@@ -71,18 +85,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onPlusButtonClick(view: View) {
+        selectSymbol(Symbol.Plus)
     }
 
     fun onMinusButtonClick(view: View) {
-
+        selectSymbol(Symbol.Minus)
     }
 
     fun onTimesButtonClick(view: View) {
-
+        selectSymbol(Symbol.Times)
     }
 
     fun onDivideButtonClick(view: View) {
-
+        selectSymbol(Symbol.Divide)
     }
 
     fun onEqualButtonClick(view: View) {
