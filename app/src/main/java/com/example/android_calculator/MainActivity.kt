@@ -1,11 +1,10 @@
 package com.example.android_calculator
 
+import android.icu.math.BigDecimal
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import kotlin.time.toDuration
-
 
 class MainActivity : AppCompatActivity() {
     enum class Symbol(val text: String) {
@@ -49,6 +48,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun selectSymbol(symbol: Symbol) {
+        if (recentInputtedNumber.substring(recentInputtedNumber.count() - 1, recentInputtedNumber.count()) == ".") {
+            return
+        }
         if (numberArrayList.count() > 0 && numberArrayList.count() != symbolArrayList.count()) {
             return
         }
@@ -63,17 +65,35 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun selectEqual() {
+        if (recentInputtedNumber.substring(recentInputtedNumber.count() - 1, recentInputtedNumber.count()) == ".") {
+            return
+        }
         if (numberArrayList.count() != symbolArrayList.count()) {
             return
         }
         numberArrayList.add(recentInputtedNumber.toDouble())
         recentInputtedNumber = ""
         calculate()
-        val resultText = numberArrayList.first().toString()
+        val resultText = BigDecimal.valueOf(numberArrayList.first()).toString()
         clearAll()
         val textView = findViewById<TextView>(R.id.resultText)
         textView.text = resultText
         isShowingResult = true
+    }
+
+    private fun selectDot() {
+        if (recentInputtedNumber.isEmpty() || recentInputtedNumber.contains(".")) {
+            return
+        }
+        val textView = findViewById<TextView>(R.id.resultText)
+        textView.text = buildString {
+            append(textView.text.toString())
+            append(".")
+        }
+        this.recentInputtedNumber = buildString {
+            append(recentInputtedNumber)
+            append(".")
+        }
     }
 
     private fun calculate() {
@@ -174,7 +194,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onDotButtonClick(view: View) {
-
+        selectDot()
     }
 
     fun onClearButtonClick(view: View) {
